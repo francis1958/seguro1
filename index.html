@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contrata tu Seguro Online</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <section id="inicio" class="active">
+      <h1>Bienvenido a tu Seguro Online</h1>
+      <button onclick="siguientePaso('registro')">Calcula tu seguro</button>
+    </section>
+
+    <section id="registro">
+      <h2>Registro</h2>
+      <input type="text" id="nombre" placeholder="Nombre completo" />
+      <input type="email" id="email" placeholder="Correo electrónico" />
+      <input type="password" id="password" placeholder="Contraseña" />
+      <button onclick="siguientePaso('tarificacion')">Siguiente</button>
+    </section>
+
+    <section id="tarificacion">
+      <h2>Tarificación</h2>
+      <select id="tipoSeguro">
+        <option value="auto">Seguro de Auto</option>
+        <option value="salud">Seguro de Salud</option>
+      </select>
+      <input type="number" id="edad" placeholder="Edad" />
+      <button onclick="calcularPrecio()">Calcular</button>
+      <div id="precioEstimado"></div>
+      <button onclick="siguientePaso('resumen')">Siguiente</button>
+    </section>
+
+    <section id="resumen">
+      <h2>Resumen del Seguro</h2>
+      <div id="detalleSeguro"></div>
+      <button onclick="siguientePaso('contratacion')">Siguiente</button>
+    </section>
+
+    <section id="contratacion">
+      <h2>Contratación</h2>
+      <p>Confirma la contratación de tu seguro.</p>
+      <button onclick="confirmarSeguro()">Confirmar</button>
+      <div id="mensajeConfirmacion"></div>
+    </section>
+
+    <section id="postventa">
+      <h2>Gracias por contratar</h2>
+      <p>Te hemos enviado un email con los detalles. Puedes acceder a tu área de cliente en cualquier momento.</p>
+      <div class="alert">📧 Email enviado: Confirmación de contratación y acceso al área cliente.</div>
+    </section>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+section {
+  display: none;
+  padding: 2rem;
+}
+
+section.active {
+  display: block;
+}
+
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+.alert {
+  background: #d9edf7;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-left: 5px solid #31708f;
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 14px;
+  }
+}
